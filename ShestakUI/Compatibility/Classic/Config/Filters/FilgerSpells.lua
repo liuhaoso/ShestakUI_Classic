@@ -160,6 +160,9 @@ C["filger_spells"] = {
 			Alpha = 1,
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_PROC_ICON_Anchor},
+			
+			--手动惩戒器
+			{spellID = 13494, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Buffs
 			-- Clearcasting [Omen of Clarity]
@@ -923,7 +926,7 @@ C["filger_spells"] = {
 			-- Fireball r12
 			{spellID = 25306, unitID = "target", caster = "player", filter = "DEBUFF", absID = true},
 			-- Fire Vulnerability (Improved Scorch)
-			{spellID = 22959, unitID = "target", caster = "all", filter = "DEBUFF"},
+			{spellID = 22959, unitID = "target", caster = "all", filter = "DEBUFF", absID = true},
 			-- Flamestrike
 			-- {spellID = 2120, unitID = "target", caster = "player", filter = "DEBUFF", absID = true},
 			-- Frost Nova
@@ -2572,14 +2575,14 @@ C["filger_spells"] = {
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
 			-- Battle Shout
-			{spellID = 6673, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 6673, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Berserker Rage
 			{spellID = 18499, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Bloodrage
-			{spellID = 29131, unitID = "player", caster = "player", filter = "BUFF"},
+			--{spellID = 29131, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Bloodthirst
-			{spellID = 23885, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Death Wish
+			--{spellID = 23885, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Sweeping Strikes
 			{spellID = 12292, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Flurry
 			{spellID = 12966, unitID = "player", caster = "player", filter = "BUFF"},
@@ -2591,8 +2594,8 @@ C["filger_spells"] = {
 			{spellID = 20230, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Shield Wall
 			{spellID = 871, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Sweeping Strikes
-			{spellID = 12328, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Death Wish
+			{spellID = 12328, unitID = "player", caster = "player", filter = "DEBUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -2602,6 +2605,9 @@ C["filger_spells"] = {
 			Alpha = 1,
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_PROC_ICON_Anchor},
+			
+			--钻石水瓶
+			{spellID = 24427, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Buffs
 			-- Blood Craze
@@ -2823,7 +2829,7 @@ C["filger_spells"] = {
 			-- Recklessness
 			{spellID = 1719, filter = "CD"},
 			-- Retaliation
-			{spellID = 20230, filter = "CD"},
+			--{spellID = 20230, filter = "CD"},
 			-- Revenge
 			{spellID = 6572, filter = "CD"},
 			-- Shield Bash
@@ -2833,7 +2839,7 @@ C["filger_spells"] = {
 			-- Shield Slam
 			{spellID = 23922, filter = "CD"},
 			-- Shield Wall
-			{spellID = 871, filter = "CD"},
+			--{spellID = 871, filter = "CD"},
 			-- Sweeping Strikes
 			{spellID = 12328, filter = "CD"},
 			-- Taunt
@@ -2889,6 +2895,10 @@ C["filger_spells"] = {
 			Alpha = 1,
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", SPECIAL_P_BUFF_ICON_Anchor},
+			
+			--额外添加
+			--灵感
+			{spellID = 15359, unitID = "player", caster = "all", filter = "BUFF"},
 
 			-- Potions: Classic
 			-- Greater Stoneshield Potion
